@@ -1,2 +1,2 @@
 <?php 
-require("app/views/home.php");
+require_once("app/views/home.php");

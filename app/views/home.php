@@ -14,7 +14,7 @@
 
 
   <div class="box"> 
-<form method="POST" action="index.php" enctype="multipart/form-data">
+<form method="POST" action="./app/controllers/UserController.php" enctype="multipart/form-data">
 <h2>Input form</h2>
     <div class="inputBox">
         <input type="text" id="first_name" name="first_name" required><br>

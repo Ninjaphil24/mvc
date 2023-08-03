@@ -1,5 +1,5 @@
 <?php
-require_once('./models/UserModel.php');
+require_once('../models/UserModel.php');
 
 // Initialize
 $first_name = $last_name = $email = "";
@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
 
         // Handle result
         if ($result === true) {
-            header("Location: success.php"); // Redirect to confirmation.php
+            header("Location: ../../success.php"); 
             exit; // Exit to prevent further execution
         } else {
             // $result contains an error message
