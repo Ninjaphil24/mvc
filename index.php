@@ -1,1 +1,2 @@
-Hello
+<?php 
+require("app/views/home.php");
