@@ -1,13 +1,17 @@
 <?php
 $host = "localhost";
 $username = "root";
-$password = "";
+$password = "virtuoso";
 $dbname = "employees";
 
 // Create a new mysqli object to establish a database connection
 try{
-    
     $con = new mysqli($host, $username, $password, $dbname);
+
+    // Check connection
+    if ($con->connect_error) {
+        throw new Exception("Connection failed: " . $con->connect_error);
+    }
     mysqli_set_charset($con, 'utf8');
 
 }catch (Exception $ex){
