@@ -1,17 +1,14 @@
 <?php
 class UserController {
-    protected $con;
-
-    public function __construct($con) {
-        $this->con = $con;
-    }
+    
     public function create() {
+        global $con;
         // Handle form submission
         $first_name = $_POST['first_name'];
         $last_name = $_POST['last_name'];
         $email = $_POST['email'];
         $store = new Employee();
-        $result = $store->createEmployee($this->con, $first_name, $last_name, $email);
+        $result = $store->createEmployee($con, $first_name, $last_name, $email);
 
         if ($result === true) {
             header("Location: /success.php"); 
