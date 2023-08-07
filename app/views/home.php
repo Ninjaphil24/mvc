@@ -1,17 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Apply</title>
-    <link href="favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-    <link rel="stylesheet" href="./public/form.css">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-</head>
-<body>
-
 
   <div class="box"> 
 <form method="POST" action="index.php" enctype="multipart/form-data">
@@ -36,6 +22,3 @@
 
 
 </div>
-</section>
-</body>
-</html>			
