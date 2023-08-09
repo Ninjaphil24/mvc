@@ -21,9 +21,11 @@ require_once('routes/Router.php');
 
 <?php
 $router = new Router();
-
+// if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+$router->addRoute('/index.php', 'UserController', 'create');
+// }else {
 $router->addRoute('/', 'UserController', 'index');
-
+// }
 $router->dispatch($_SERVER['REQUEST_URI']);
 echo '<pre>';
 var_dump($_SERVER['REQUEST_URI']);
