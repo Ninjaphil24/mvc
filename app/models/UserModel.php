@@ -20,7 +20,7 @@ class Employee {
     // Execute the prepared statement
     if ($stmt->execute()) {
         // Success! Data inserted into the table.
-        header("Location: /../../success.php"); // Redirect to confirmation.php
+        header("Location: ./index.php"); // Redirect to confirmation.php
         exit; // Exit to prevent further execution
     } else {
         // Check if the error is due to duplicate entry (unique constraint violation)
