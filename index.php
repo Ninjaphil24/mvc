@@ -2,6 +2,7 @@
 require('mysqli_connect.php');
 require_once("app/models/UserModel.php");
 require_once("app/controllers/UserController.php");
+require_once('routes/Router.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,14 +20,15 @@ require_once("app/controllers/UserController.php");
 <h1>Εταιρία Λυρικού Θεάτρου Ελλάδος</h1>
 
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Form was submitted
-    $controller = new UserController();
-    $controller->create();
-} else {
-    // No form submission, display the form
-    require_once("app/views/home.php");
-}
+$router = new Router();
+
+$router->addRoute('/', 'UserController', 'index');
+
+$router->dispatch($_SERVER['REQUEST_URI']);
+echo '<pre>';
+var_dump($_SERVER['REQUEST_URI']);
+echo '</pre>';
+
 ?>
 
 </body>

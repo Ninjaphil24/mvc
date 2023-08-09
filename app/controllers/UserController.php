@@ -1,6 +1,8 @@
 <?php
 class UserController {
-    
+    public function index() {
+        include './app/views/home.php';
+    }
     public function create() {
         global $con;
         // Handle form submission
