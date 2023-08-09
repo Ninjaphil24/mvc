@@ -1,5 +1,4 @@
-
-  <div class="box"> 
+<div class="box"> 
 <form method="POST" action="index.php" enctype="multipart/form-data">
 <h2>Input form</h2>
     <div class="inputBox">
@@ -19,6 +18,4 @@
         <input type="submit" name="submit" value="Υποβολή">
     </div>
     </form>
-
-
 </div>
