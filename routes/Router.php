@@ -1,12 +1,15 @@
 <?php
-class Router {
+class Router
+{
     private $routes = [];
 
-    public function addRoute($route, $controller, $method) {
+    public function addRoute($route, $controller, $method)
+    {
         $this->routes[$route] = ["controller" => $controller, "method" => $method];
     }
 
-    public function dispatch($route) {
+    public function dispatch($route)
+    {
         // $route = rtrim($route, '/'); // remove trailing slashes
         if (array_key_exists($route, $this->routes)) {
             $controller = $this->routes[$route]["controller"];

@@ -5,7 +5,7 @@ $password = "virtuoso";
 $dbname = "employees";
 
 // Create a new mysqli object to establish a database connection
-try{
+try {
     $con = new mysqli($host, $username, $password, $dbname);
 
     // Check connection
@@ -13,9 +13,8 @@ try{
         throw new Exception("Connection failed: " . $con->connect_error);
     }
     mysqli_set_charset($con, 'utf8');
-
-}catch (Exception $ex){
+} catch (Exception $ex) {
     print "An Exception occurred. Message: " . $ex->getMessage();
-} catch (Error $e){
+} catch (Error $e) {
     print "The system is busy please try later";
 }
